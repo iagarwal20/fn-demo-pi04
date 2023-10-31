@@ -25,8 +25,13 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
             blob_service_client.close()
     except Exception as e:
         logging.exception("Unable to connect to storage client"+ e)
+        return func.HttpResponse(
+            "Cannot connect to storage client",
+            status_code=500
+        )
+
 
     return func.HttpResponse(
-             "Successfully updated inventory",
+             "Successfully connected to storage client",
              status_code=200
         )
