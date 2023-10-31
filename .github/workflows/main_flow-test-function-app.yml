@@ -70,6 +70,6 @@ jobs:
           app-name: 'flow-test-function-app'
           slot-name: 'Production'
           package: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_72AB43C8E4F14FE7A2EB21D9E5A5EB9C }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_E85F48C4177D4E0DA8E0275B820348E6 }}
           scm-do-build-during-deployment: true
           enable-oryx-build: true
